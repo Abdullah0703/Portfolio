@@ -6,7 +6,7 @@ import Resume from "../public/Abdullah_Resume_latest.pdf";
 
 const About = () => {
   return (
-    <div className="min-h-screen bg-gray-900 text-gray-200 py-8 px-5 font-mono">
+    <div className="min-h-screen bg-gray-900 text-gray-200 py-8 px-5 font-mono overflow-y-auto">
       <motion.div
         className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8"
         initial={{ opacity: 0 }}

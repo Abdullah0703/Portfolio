@@ -63,7 +63,7 @@ const Projects = () => {
 
     return (
         <div className="min-h-screen bg-gray-900 text-gray-200 py-12 px-6">
-            <h1 className="text-4xl font-extrabold text-center mb-10">My GitHub Projects</h1>
+            <h1 className="text-4xl sm:text-3xl text-center mb-10 font-extrabold">My Projects</h1>
 
             {/* Display Repositories */}
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 p-5">
@@ -80,7 +80,7 @@ const Projects = () => {
                         >
                             {repo.name}
                         </a>
-                        <p className="text-sm text-gray-400 mb-4 break-words">
+                        <p className="text-sm sm:text-xs text-gray-400 mb-4 break-words">
                             {repo.description || 'No description provided'}
                         </p>
                     </div>

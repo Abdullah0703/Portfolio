@@ -27,11 +27,14 @@ const Searchbar = () => {
   };
 
   return (
-    <div className="flex items-center justify-center h-screen bg-gray-900 overflow-hidden font-mono">
+    <div
+      id="search"
+      className="flex items-center justify-center min-h-screen bg-gray-900 overflow-hidden font-mono px-4"
+    >
       <div className="relative w-full max-w-xl text-center">
         {/* Title */}
         <motion.h1
-          className="font-extrabold text-6xl text-gray-100 mb-6"
+          className="font-extrabold text-4xl sm:text-6xl text-gray-100 mb-6"
           initial={{ opacity: 0, y: -50, scale: 0.9 }}
           animate={{ opacity: 1, y: 0, scale: 1 }}
           transition={{ duration: 0.8, ease: 'easeOut' }}
@@ -45,7 +48,7 @@ const Searchbar = () => {
           <motion.input
             type="text"
             placeholder="Search here..."
-            className="border-2 border-gray-700 bg-gray-800 text-gray-100 rounded-lg px-4 pr-12 focus:outline-none focus:ring-4 focus:ring-blue-500 w-full h-12 shadow-md transition-all"
+            className="border-2 border-gray-700 bg-gray-800 text-gray-100 rounded-lg px-4 pr-12 focus:outline-none focus:ring-4 focus:ring-blue-500 w-full h-12 shadow-md transition-all text-sm sm:text-base"
             onFocus={() => setShowDropdown(true)}
             onBlur={() => setTimeout(() => setShowDropdown(false), 200)}
             initial={{ opacity: 0, y: -20 }}
@@ -112,7 +115,7 @@ const Searchbar = () => {
             transition={{ duration: 0.3 }}
           >
             <div className="bg-gray-900 p-6 rounded-lg shadow-lg w-72 text-center">
-              <p className="text-gray-100">{modalMessage}</p>
+              <p className="text-gray-100 text-sm sm:text-base">{modalMessage}</p>
             </div>
           </motion.div>
         )}

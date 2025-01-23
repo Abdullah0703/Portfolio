@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import ProfilePic from '../public/7309681.jpg';
 import axios from 'axios';  // Import Axios
 import { FaLinkedin, FaGithub } from 'react-icons/fa';  // Import LinkedIn and GitHub icons
+import Searchbar from './Searchbar';
 
 const Navbar = () => {
     const [isModalOpen, setIsModalOpen] = useState(false);
@@ -124,10 +125,9 @@ const Navbar = () => {
                     </div>
                 </div>
 
-                {/* Profile Picture */}
-                <a href="#" className="w-11 h-11 rounded-full overflow-hidden ml-3 mt-2">
+                <Link to="/" className="w-11 h-11 rounded-full overflow-hidden ml-3 mt-2">
                     <img src={ProfilePic} alt="Profile" className="w-full h-full object-cover" />
-                </a>
+                </Link>
             </div>
 
             {/* Modal for Email Form */}
